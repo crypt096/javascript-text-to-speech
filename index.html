@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <title>JavaScript Text To Speech</title>
+    <style>
+      body {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 1rem;
+      }
+
+      #text {
+        width: 100%;
+        height: 50vh;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      input#speed {
+        margin-right: 50px;
+      }
+
+      button#play-button,
+      button#pause-button,
+      button#stop-button {
+        margin: 0 5px;
+      }
+
+      img {
+        width: 100%;
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="ui inverted segment">
+      <h4 class="ui horizontal inverted divider">
+        Your smart AI text to speech agent
+      </h4>
+    </div>
+    <img src="./assets/AI.jpg" alt="Artificial Inteligence picture" />
+    <div class="ui inverted segment">
+      <h4 class="ui horizontal inverted divider">
+        Enter text
+      </h4>
+    </div>
+
+    <div class="ui form">
+      <div class="field">
+        <textarea id="text"></textarea>
+      </div>
+    </div>
+
+    <div class="ui inverted segment">
+      <h4 class="ui horizontal inverted divider">
+        Commands
+      </h4>
+    </div>
+
+    <div class="ui inverted segment">
+      <label for="speed">Speed</label>
+      <div class="ui inverted input">
+        <input
+          type="number"
+          name="speed"
+          id="speed"
+          min=".5"
+          max="3"
+          step=".5"
+          value="1"
+        />
+      </div>
+
+      <button class="ui inverted labeled icon button" id="play-button">
+        <i class="play icon"></i>
+        Play
+      </button>
+      <button class="ui inverted labeled icon button" id="pause-button">
+        <i class="pause icon"></i>
+        Pause
+      </button>
+      <button class="ui inverted labeled icon button" id="stop-button">
+        <i class="stop icon"></i>
+        Stop
+      </button>
+    </div>
+  </body>
+</html>
